@@ -5,9 +5,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Microverse Survey Form</title>
-   
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+    
     <div class="container">
         <header class="header">
             <h1 id="title">Microverse Survey Form </h1>
@@ -15,13 +16,54 @@
         </header>
         <form action="" id="survey-form">
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name" id="name-lable">Name</label>
                 <input type="text" name="name" id="name" class="formControl" placeholder="Enter your name" required />
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email" id="email-label">Email</label>
                 <input type="email" name="email" id="email" class="formControl" placeholder="Enter your email" required />
             </div>
+            <div class="form-group">
+                <label for="number" id="number-label">Phone Number</label>
+                <input type="number" name="number" id="number" class="formControl" min="1" max="15" placeholder="Enter your phone number" required />
+            </div>
+            <div class="select">
+                <label for="text">Which option best describes your current role?</label>
+                <select name="" id="">
+                    <option value="student">Student</option>
+                    <option value="Job">Part Time Job</option>
+                    <option value="Learner">Full Time Learner</option>
+                    <option value="Mute">Prefer Not To Say It</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p id="quest">Would you recommend Microverse to a friend?</p>
+                <label for=""><input type="radio" name="source" value="Definitely" class="inputRadio" checked>Definitely</label>
+                <label for=""><input type="radio" name="source" value="Maybe" class="inputRadio">Maybe</label>
+                <label for=""><input type="radio" name="source" value="Not Sure" class="inputRadio">Not Sure</label>
+            </div>
+            <div class="form-group">
+                <p id="quest">What would you like to see improved? (Check all that apply)</p>
+                <label for=""><input type="checkbox" name="prefer" value="Front-end Projects" class="checkbox">Front-end Projects</label>
+                <label for=""><input type="checkbox" name="prefer" value="Back-end Projects" class="checkbox">Back-end Projects</label>
+                <label for=""><input type="checkbox" name="prefer" value="Data Visualization" class="checkbox">Data Visualization</label>
+                <label for=""><input type="checkbox" name="prefer" value="Challenges" class="checkbox">Challenges</label>
+                <label for=""><input type="checkbox" name="prefer" value="Open Source Community" class="checkbox">Open Source Community</label>
+                <label for=""><input type="checkbox" name="prefer" value="Data-input" class="checkbox">Gitter help rooms</label>
+                <label for=""><input type="checkbox" name="prefer" value="Data-input" class="checkbox">Videos</label>
+                <label for=""><input type="checkbox" name="prefer" value="Data-input" class="checkbox">City Meetups</label>
+                <label for=""><input type="checkbox" name="prefer" value="Data-input" class="checkbox">Wiki</label>
+                <label for=""><input type="checkbox" name="prefer" value="Data-input" class="checkbox">Forum</label>
+                <label for=""><input type="checkbox" name="prefer" value="Additional Courses" class="checkbox">Additional Courses</label>
+            </div>
+            <div class="text">
+                <label for="text">Any comments or suggestions?</label>
+                <textarea name="text" id="text-area" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+
+
         </form>
     </div>
 
